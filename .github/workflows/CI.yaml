@@ -39,8 +39,8 @@ jobs:
           fi
       - name: Upload coverage report
         if: matrix.coverage
-        uses: codecov/codecov-action@v1.0.2
+        uses: codecov/codecov-action@v1
         with:
+          name: test-go${{ matrix.go }}
           file: ./coverage.txt
           flags: unittests
-          name: codecov-umbrella
